@@ -1,0 +1,49 @@
+body {
+    background-color: #305730;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    border: 3px solid black;
+    padding: 1em;
+}
+
+.card img {
+    border-radius: 1em 1em 0 0;
+    padding-bottom: .5em;
+}
+
+.badge {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 0 0 1em 1em;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    background-color: cadetblue;
+    font-size: x-large;
+    border-radius: .5em;
+    border: none;
+    transition: .5s all;
+}
+
+.btn:hover {
+    width: 100%;
+    height: 40px;
+    color: cadetblue;
+    background-color: black;
+    font-size: x-large;
+    border: none;
+}
