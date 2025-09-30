@@ -19,6 +19,11 @@ body {
 .card img {
     border-radius: 1em 1em 0 0;
     padding-bottom: .5em;
+    height: 208px;
+}
+
+.card p {
+    color: black;
 }
 
 .badge {

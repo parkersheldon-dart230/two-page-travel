@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The 2nd Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <h1>Parker Sheldon's Travel Site!</h1>
+    <h3 id="cta">You have chosen: BLANK</h3>
+    <div class="card">
+        <img id="img" width="100%" src="tenor.gif" alt="">
+        <p class="pepper">You picked an exciting location to go to!</p>
+        <p class="pepper">The price of it will be $400</p>
+        <p class="pepper">Don't ask why, it's like this for every place</p>
+        <p class="pepper">YOU NEED TO HAVE ACTUAL MONEY NOT CRYPTO</p>
+        <p class="pepper">because crypto is for losers :)</p>
+    </div>
+    <script>
+        let query = new URLSearchParams(window.location.search);
+        let cta = document.getElementById("cta");
+        let img = document.getElementById("img");
+        let pepper = document.querySelectorAll(".pepper");
+
+        if (query.has("p") && query.has("img")) {
+            cta.innerHTML = `You have chosen: ${query.get("p")}`
+            img.src = window.atob(query.get("img"));
+            img.alt = query.get("p");
+        } else {
+            cta.innerHTML = "You don't have a place, why are you here?";
+            pepper.forEach(e => {
+                e.innerHTML = "GET OUT";
+            });
+        }
+
+    </script>
 </body>
+
 </html>
